@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: "war"
+
+sourceCompatibility = 1.7
+ 
+repositories {
+    mavenCentral()
+}
+ 
+war {
+    baseName = 'SpringMVCExample'
+    version = '1.0.0-BUILD-SNAPSHOT'
+}
+ 
+dependencies {
+  compile("org.springframework:spring-context:3.1.1.RELEASE")
+    compile("org.springframework:spring-webmvc:3.1.1.RELEASE")
+    compile("org.aspectj:aspectjrt:1.6.4")
+ 
+    compile("javax.inject:javax.inject:1")
+    compile("javax.servlet:servlet-api:2.5")
+    compile("javax.servlet:jstl:1.2")
+    compile("javax.servlet.jsp:jsp-api:2.1")    
+    compile("org.slf4j:slf4j-api:1.6.6")
+    compile("org.slf4j:jcl-over-slf4j:1.6.6")
+    compile("org.slf4j:slf4j-log4j12:1.6.6")
+    compile("log4j:log4j:1.2.15")
+    compile("javax.servlet:jstl:1.2")
+ 
+    testCompile("junit:junit:4.7") 
+}
